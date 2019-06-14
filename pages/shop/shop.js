@@ -5,7 +5,10 @@ Page({
    * 页面的初始数据
    */
   data: {
-    picresource: '../../images/1.jpg'
+    picresource: '../../images/1.jpg',
+    appreciate_class: 'text-gray',
+    focus:false,
+    input_show:true
   },
   previewPic: function (e) {
     console.log(e.currentTarget.dataset.index);
@@ -18,7 +21,18 @@ Page({
       complete: function (res) { },
     })
   },
+  appreciate:function(e){
+    this.setData({
+      appreciate_class:'text-green'
+    })
+  },
+  commentfill:function(){
 
+      this.setData({
+        focus:true,
+        input_show:false
+      })
+  },
   /**
    * 生命周期函数--监听页面加载
    */

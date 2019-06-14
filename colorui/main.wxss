@@ -1881,7 +1881,7 @@ button.icon.lg {
 }
 
 .cu-bar.input {
-	padding-right: 20rpx;
+
 	background-color: var(--white);
 }
 

@@ -3,39 +3,67 @@
   <cu-custom bgColor="bg-gradual-blue">
     <view slot="content">商店详情</view>
   </cu-custom>
-  <view style='display:flex;'>
-    <view style='width:20%;height:200rpx;'>
-      <view style='padding-top:50rpx;'>
-        <view class="cu-avatar xl round" style="background-image:url(https://ossweb-img.qq.com/images/lol/web201310/skin/big10001.jpg"></view>
-      </view>
+  <view class="bg-img bg-mask padding-tb-xl" style="background-image: url('https://ossweb-img.qq.com/images/lol/web201310/skin/big10006.jpg');height: 414rpx;padding-left:30rpx;">
 
+    <view style='padding-top:170rpx;'>
+      <view class="cu-avatar xl round" style="background-image:url(https://ossweb-img.qq.com/images/lol/web201310/skin/big10001.jpg"></view>
     </view>
-    <!--右边部分-->
-    <view style='width:80%;height:200rpx;margin-top:15%;'>
-      <!--右上部分-->
-      <view class='top_1'>
-        <text>昵称</text>
-        <text>2019年06月05日</text>
-        <!--右下部分-->
-        <view class='top_2'>
-          <image src='{{picresource}}' data-src="{{picresource}}" bindtap='previewPic' style='width:30%;height:200rpx;padding:1.5%;' wx:for="{{[1,2,3,4,5,6,7,8,9]}}"></image>
-        </view>
-        <view style='display:flex;'>
-        <text class="cuIcon-location lg text-gray" style='padding-top:10rpx;'></text>
-        <text style='color:blue;font-size:30rpx;'>铭泰楼</text>
-        </view>             
-        <view style='display:flex;height:200rpx;' wx:for="{{[1,2,3,4,5,6,7,8,9]}}">
-          <view style='width:30%;background:red;'>
-            <image src='../../images/1.jpg' style='width:100%;height:200rpx;'></image>
-          </view>
-          <view style='width:70%'>
-            <view style='width:70%;display:flex;flex-direction:column;padding-left:10%;'>
-              <text>用户名</text>
-              <text>留言板</text>
-              <text>时间</text>
-            </view>
 
+  </view>
+  <view style='display:flex;justify-content:center;'>
+    <!--右边部分-->
+    <view style='padding-left:20rpx;width:95%;padding-top:25rpx;'>
+      <!--右上部分-->
+      <view class='top_2'>
+        <!--资料区-->
+        <view style='display:flex;height:120rpx;width:650rpx;'>
+
+          <view class="cu-avatar round lg" style="background-image:url(https://ossweb-img.qq.com/images/lol/web201310/skin/big10006.jpg);"></view>
+
+
+          <view style='display:flex;flex-direction: column;position: absolute;left: 160rpx;'>
+            <text>追风少年</text>
+            <text style='font-size:20rpx;color:#8799a3;'>今天16:02</text>
           </view>
+        </view>
+        <view class='text-content' style="width:95%;">
+          到处藏着彩旦的电影先导片，，有生之年系列，真是1real 期待了……最后的Maybe 有点方……
+        </view>
+
+        <!--资料区  end-->
+        <image src='{{picresource}}' data-src="{{picresource}}" bindtap='previewPic' style='width:30%;height:200rpx;padding:1.5% 1.5% 1.5% 0;' wx:for="{{[1,2,3,4,5,6,7,8,9]}}"></image>
+      </view>
+      <view class='flex'>
+        <text class="cuIcon-location lg text-gray" style='padding-top:6rpx;'></text>
+        <text style='color:#aaaaaa;;font-size:26rpx;'>铭泰楼</text>
+      </view>
+      <view class='flex flex-end'>
+        <text class='cuIcon-appreciate {{appreciate_class}}' bindtap='appreciate' style='margin-right:20rpx;'></text>
+        <text class='cuIcon-commentfill text-gray' bindtap='commentfill' style='margin-right:20rpx;'></text>
+        <text class='cuIcon-forward text-gray'></text>
+      </view>
+      <view class='flex' style='flex-direction:column;'>
+        <view class='flex'>
+          <text style='color:#0081ff;font-size:25rpx;'>小明</text>:
+          <text style='padding-top:5rpx;'>66666</text>
+        </view>
+        <!--<view class='cu-bar search' style='height:50rpx;background-color:red;'>
+          <view class='search-form'>
+            <text class='cuIcon-search'></text>
+            <input type='text' placeholder='评论'></input>
+          </view>
+        </view>-->
+
+
+        <view class="cu-bar input" hidden='{{input_show}}'>
+          <view class="action">
+            <text class="cuIcon-sound text-grey"></text>
+          </view>
+          <input class="solid-bottom" focus="{{focus}}" maxlength="300" cursor-spacing="10"></input>
+          <view class="action ">
+            <text class="cuIcon-emojifill text-grey "></text>
+          </view>
+          <button class="cu-btn bg-green shadow-blur ">评论</button>
         </view>
       </view>
     </view>
