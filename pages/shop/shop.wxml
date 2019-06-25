@@ -1,0 +1,92 @@
+<cu-custom bgColor="shop_head" isBack="{{true}}">
+  <view slot="backText">返回</view>
+  <view slot="content" class='head_font'>点餐</view>
+</cu-custom>
+
+<view class='.container'>
+  <view style='width:100%;' wx:for="{{foods}}" wx:key>
+    <view class='display_colume'>
+      <view class='{{item.food_info}} flex'>
+        <view style='width:20%;'>
+          <view class="cu-avatar margin-left" style="background-image:url('https://cdn.img.wenhairu.com/images/2019/06/23/2ndI.png');height:100rpx;width:100rpx;"></view>
+        </view>
+        <view class='food' style='margin:auto;width:50%;'>
+          <text style='color:#793800;font-size:40rpx;font-family:Avenir Next;font-weight:bold;'>{{item.name}}</text>
+        </view>
+        <view class='food flex' style='margin:auto;' bindtap='clickMenu' data-index="{{index}}">
+          <text style='font-family:Saira Condensed Condensed;color:#793800;font-size:45rpx;'>{{item.quantity}}</text>
+          <image src='{{food_info}}' style='height:50rpx;width:50rpx;margin-left:60rpx;margin-top:8rpx;'></image>
+        </view>
+      </view>
+      <view>
+        <view class='t_level_food' hidden='{{item.hideHidden}}'>
+          <view class='flex' wx:for-item="cell" wx:for-index="cellindex" wx:for="{{item.foods_info}}">
+            <view class='half display_colume'>
+              <view class='food_cat'>
+                <view class='food_cat_border'>
+                  <image src='../../colorui/pics/Bitmap.png' class='food_image' mode='widthFix'></image>
+                </view>
+              </view>
+              <view class='flex'>
+                <view class='display_colume food_money' style=''>
+                  <text style='color:#793800;font-size:30rpx;font-family:Avenir Next;font-weight:bold;'>{{cell.name}}</text>
+                  <text style='font-family:Saira Condensed Condensed;color:#e03d3d;font-size:30rpx;font-weight:bold;'>￥{{cell.money}}  (份)</text>
+                </view>
+                <view>
+                  <image src='../../colorui/pics/food_add.png' data-index="{{index}}" data-senindex="{{cellindex}}" bindtap='addFood' style='width:80rpx;float: right;margin-top:20rpx;' mode='widthFix'></image>
+                </view>
+
+              </view>
+
+
+            </view>
+          </view>
+
+        </view>
+      </view>
+    </view>
+
+  </view>
+</view>
+
+
+<view>
+
+  <view class="cu-bar bg-white shop_bottom">
+    <view class='flex'>
+      <view class='display_right' style='width:100rpx;' bindtap="show_orderinfo">
+        <text style='font-family:Saira Condensed Condensed;color:#793800;font-size:90rpx;font-weight:bold;'>{{quality}}</text>
+      </view>
+      <view class='display_colume display_colume_center' style='width:300rpx;margin-left:30rpx;' bindtap="show_orderinfo">
+        <text style='color:#793800;font-size:30rpx;font-family:Avenir Next;'>已点</text>
+        <text style='font-family:Saira Condensed Condensed;color:#e03d3d;font-size:35rpx;font-weight:bold;'>￥{{sum_money}}</text>
+      </view>
+      <view style='width:400rpx;'>
+        <view style='width:250rpx;background-color:#ff9a4d;height:100rpx;margin-top:20rpx;border-radius:20rpx;text-align:center;'>
+          <text style='color:white;font-size:40rpx;font-family:Avenir Next;line-height: 47px'>确认下单</text>
+        </view>
+      </view>
+    </view>
+    <view bindtap="showOrderInfo" class="shopcart-list" hidden="{{      showOrderInfo}}">
+      <view class="display_colume shopping_cart">
+        <view class='list_header'>
+          <view class='title'>购物车</view>
+          <view class='flush'>清空</view>
+        </view>
+        <view class="list_content">
+          <view class="shopcart-food" wx:for="{{order_infos}}">
+            <text class="name">{{item.name}}</text>
+            <view class="price">
+              ￥{{item.money}}
+            </view>
+            <view class="cart-count">
+              <view >11</view>
+              <view class="iconfont icon-add"></view>
+            </view>
+
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

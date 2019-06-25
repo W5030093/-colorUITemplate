@@ -1,0 +1,153 @@
+/* pages/shop/shop.wxss */
+
+page {
+  display: block;
+  background-color: #e03d3d;
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-add:before {
+  content: "\e629";
+}
+
+.display_colume {
+  display: flex;
+  flex-direction: column;
+}
+
+.display_colume_center {
+  justify-content: center;
+}
+
+.display_right {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.half {
+  width: 350rpx;
+  height: 400rpx;
+}
+
+.container {
+  width: 95%;
+  margin-left: 20rpx;
+}
+
+.shop_bottom {
+  position: fixed;
+  bottom: 0px;
+  width: 100%;
+  height: 150rpx;
+  z-index: 999;
+}
+
+.shopcart-list {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  transform: translate3d(0, -100%, 0);
+}
+
+.foods_info_off {
+  height: 140rpx;
+  margin-top: 20rpx;
+  background-color: white;
+  padding: 20rpx;
+  border-radius: 20rpx;
+}
+
+.foods_info_on {
+  height: 140rpx;
+  margin-top: 20rpx;
+  background-color: white;
+  padding: 20rpx;
+  border-radius: 0rpx;
+  border-top-left-radius: 20rpx;
+  border-top-right-radius: 20rpx;
+}
+
+.food {
+  width: 30%;
+}
+
+.t_level_food {
+  background-color: #f7f7f7;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.food_cat {
+  height: 250rpx;
+}
+
+.food_cat_border {
+  width: 300rpx;
+  height: 300rpx;
+}
+
+.food_image {
+  padding-left: 50rpx;
+  width: 300rpx;
+}
+
+.food_money {
+  padding-left: 50rpx;
+  width: 220rpx;
+}
+
+.shopping_cart .list_header {
+  height: 40px;
+  line-height: 40px;
+  padding: 0 18px;
+  background: #f7f7f7;
+
+}
+
+.shopping_cart .list_header .title {
+  float: left;
+}
+
+.shopping_cart .flush {
+  float: right;
+}
+.shopping_cart .list_content{
+    padding: 0 18px;
+  max-height: 217px;
+  overflow: hidden;
+  background: #fff;
+}
+.shopping_cart .list_content .shopcart-food{
+  position: relative;
+  padding: 12px 0;
+  box-sizing: border-box;
+}
+.shopping_cart .list_content .shopcart-food .name{
+  line-height: 24px;
+  font-size: 14px;
+  color: rgb(7, 17, 27);
+}
+.shopping_cart .list_content .shopcart-food .price{
+   position: absolute;
+  right: 120rpx;
+  bottom: 12px;
+  line-height: 24px;
+  font-size: 14px;
+  font-weight: 700;
+  color: rgb(240, 20, 20);
+}
+.shopping_cart .list_content .shopcart-food .cart-count{
+   position: absolute;
+  bottom: 12px;
+  right: 30rpx;
+}
+

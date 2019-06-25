@@ -1,0 +1,56 @@
+<cu-custom bgColor="shop_head">
+  <view slot="content" class='head_font'>海底捞火锅</view>
+</cu-custom>
+<!--<view class="bg-img bg-mask padding-tb-xl" style="background-image: url('../../colorui/pics/member_info.jpg');height: 414rpx;">
+   
+</view>-->
+
+<view class='container'>
+  <view class="bg-img padding-tb-xl member_info_con" style="background-image: url('https://cdn.img.wenhairu.com/images/2019/06/23/27at.png');height: 400rpx;">
+    <view class='member_left'>
+      <view class='user'>
+        <text>臻享金</text>
+        <text style='font-family:Avenir Next;color:#8b572a;'>YujunZhu</text>
+      </view>
+
+    </view>
+    <view class='member_right'>
+      <view class='top'>
+        <text class='integral'>2433</text>
+      </view>
+      <view class='bottom'>
+        <text class='jifen'>积分</text>
+      </view>
+    </view>
+  </view>
+  <view wx:if="{{order_infos.length<=0}}" class="bg-img padding-tb-xl order" style="background-image: url('https://cdn.img.wenhairu.com/images/2019/06/23/2MJs.jpg');height: 200rpx;" bindtap='redir_shop'>
+    <view class='member_left display_colume order_left'>
+      <text class='.table_font'>B 23</text>
+      <text class='font_color_white' style='font-size: 20rpx;margin-top:5rpx;'>桌号</text>
+    </view>
+    <view class='member_left'>
+      <text class='font_color_white' style='font-size: 40rpx;padding-left:150rpx;'>开始点餐</text>
+    </view>
+  </view>
+  <view wx:if="{{order_infos.length>0}}" class="bg-img padding-tb-xl order" style="background-image: url('https://cdn.img.wenhairu.com/images/2019/06/23/2MJs.jpg');height: 200rpx;" bindtap='redir_shop'>
+    <view class='member_left display_colume order_left'>
+      <text class='.table_font'>B 24</text>
+      <text class='font_color_white' style='font-size: 20rpx;margin-top:5rpx;'>桌号</text>
+    </view>
+    <view class='member_left'>
+      <text class='font_color_white' style='font-size: 40rpx;padding-left:150rpx;'>开始点餐</text>
+    </view>
+  </view>
+  <view class="bg-img padding-tb-xl order display_colume" style="background-image: url('https://cdn.img.wenhairu.com/images/2019/06/23/2czC.jpg');height: 250rpx;">
+    <view class='order_left'>
+      <text style='color:#884d00;font-size:30rpx;'>全鲜捞面，现已开售</text>
+    </view>
+    <view class='order_left'>
+      <text style='font-family:Saira Condensed Condensed;color:#e03d3d;font-size:45rpx;'>￥18</text>
+      <text style='font-family:Saira Condensed Condensed;color:#a0a0a0;font-size:30rpx;text-decoration:line-through;margin-left:20rpx;'>￥29</text>
+    </view>
+  </view>
+  <view class="bg-img padding-tb-xl order" style="background-image: url('https://cdn.img.wenhairu.com/images/2019/06/23/2kxD.jpg');height: 250rpx;">
+
+  </view>
+</view>
